@@ -61,3 +61,10 @@ src/usuario/*.http
 devnet-crm/src/usuario/*.http
 # REST Client — ficheiros HTTP com credenciais de teste
 **/*.http
+# Ambiente
+.env
+.env.development
+.env.production
+
+# REST Client
+**/*.http
