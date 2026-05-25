@@ -49,20 +49,20 @@ export default function Login() {
     return(
         <div className='min-h-screen bg-slate-950 flex items-center justify-center p-4'>
             {/**Fundo decorativo */}
-        <div className='absolute insert-0 overflow-hidden pointer-events-none'>
-            <div className='absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl'/>
-            <div className='absolute -bottom-40 -left-40 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl'/>
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+            <div className='absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl'/>
+            <div className='absolute -bottom-40 -left-40 w-96 h-96 bg-green-500/10 rounded-full blur-3xl'/>
         </div>
         <div className="relative w-full max-w-md">
         {/* Logo / Título */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-violet-600 mb-4 shadow-lg shadow-cyan-500/20">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 mb-4 shadow-lg shadow-emerald-500/20">
             <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                 d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-white tracking-tight">DevNet CRM</h1>
+          <h1 className="text-2xl font-bold text-white tracking-tight">DevNet ISP CRM</h1>
           <p className="text-slate-400 text-sm mt-1">Acede à tua área de trabalho</p>
         </div>
 
@@ -81,7 +81,7 @@ export default function Login() {
                 placeholder="exemplo@empresa.com"
                 required
                 className="w-full px-4 py-3 bg-slate-800/60 border border-slate-700 rounded-xl text-white placeholder-slate-500
-                           focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all duration-200"
+                           focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all duration-200"
               />
             </div>
 
@@ -97,7 +97,7 @@ export default function Login() {
                 placeholder="••••••••"
                 required
                 className="w-full px-4 py-3 bg-slate-800/60 border border-slate-700 rounded-xl text-white placeholder-slate-500
-                           focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 transition-all duration-200"
+                           focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all duration-200"
               />
             </div>
 
@@ -114,11 +114,10 @@ export default function Login() {
 
             {/* Botão */}
           <button
-  type="button"  // 👈 muda para button temporariamente
-  onClick={handleSubmit as any}
+  type="submit"
   disabled={carregando}
-  className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500
-             text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-cyan-500/20
+  className="w-full py-3 px-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500
+             text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/20
              disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
 >
   {carregando ? (
