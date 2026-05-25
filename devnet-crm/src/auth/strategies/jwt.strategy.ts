@@ -13,10 +13,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly usuarioService: UsuarioService) {
     super({
       jwtFromRequest: ExtractJwt.fromExtractors([
-        (req: Request) => req?.cookies?.["Access_token"] ?? null,
+        (req: Request) => req?.cookies?.["access_token"] ?? null,
       ]),
       ignoreExpiration: false,
-      secretOrKey: process.env.JWT_SECRET_KEY ?? "segredo_dev",
+      secretOrKey: process.env.JWT_SECRET ?? "segredo_dev",
     });
   }
   async validate(payload: { sub: number; email: string; role: string }) {
